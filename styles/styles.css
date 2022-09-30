@@ -1,0 +1,520 @@
+/*
+1. Posicionamiento
+2. Modelo de caja (Box model)
+3. Tipografía
+4. Visuales
+5. Otros
+*/
+:root{
+    /*Colores*/
+    --primary-color-green: #05be50;
+    --second-color-blue: #0039a6;
+    --just-white: #FFFFFF;
+    --text-grays: #808080;
+    --just-black: #000000;
+    --soft-white: #faf8f7;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+/*Header Contaleader*/
+
+header{
+
+    background: linear-gradient(90deg, #004680 0%, #4484BA 100%);
+
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;/*alinear verticalmente*/
+
+}
+.wave
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.contenedor-textos
+{
+    flex-basis: 50%;
+    padding-left: 40px;
+    overflow: hidden;
+    color: #fff;
+}
+.titulo
+{
+    font-size: 50px;
+}
+.subtitulo
+{
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px 0;/*separacion*/
+}
+.cta
+{
+    display: inline-block;
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    background: var(--primary-color-green);
+    color: var(--just-white);
+    border-radius: 4px;
+
+    font-size:1.5rem;
+    text-decoration: none;/*quitar la rallita del link */
+}
+.contenedor-imagen
+{
+    flex-basis: 50%;
+    position: relative;
+    z-index: 1;
+    text-align: center;/*extras */
+    overflow: hidden;
+}
+.img
+{
+    width: 95%;
+    animation: ilustrationAnimate ease-in 1s infinite alternate;
+}
+@keyframes ilustrationAnimate {
+    0%
+    {
+        transform: scale(1);
+    }100%
+     {
+         transform: scale(1.05);
+     }
+
+}
+.logo
+{
+    position: absolute;
+    top: 46px;
+    left: 40px;
+    width: 8%;
+}
+/*section ABOUT*/
+main{
+    min-width:320px;
+}
+
+.main-product-detail{
+    position:relative;
+    margin:30px 0;
+    width:100%;
+    height:auto;
+    background-color: var(--just-white);
+}
+.main-text__blue{
+    margin:0 auto;
+    padding-top:30px;
+    font-size:2.7rem;
+    color: var(--second-color-blue);
+    font-weight:bold;
+    text-align:center;
+}
+
+.product-cards--container{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    margin: 0 auto;
+    min-width:320px;
+    color: var(--second-color-blue);
+
+}
+
+.product-detail--card{
+    display:flex;
+    flex-direction:column;
+    align-content:center;
+    padding:20px;
+    max-width:320px;
+    background-color: var(--soft-white);
+    margin: 10px auto;
+    border-radius:5px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+}
+.product-detail--title{
+    padding-top:10px;
+    text-align:center;
+    font-size:1.5rem;
+    font-weight:600;
+}
+.product-detail--content{
+    font-size:1.2rem;
+    padding-top:10px;
+}
+.product-detail--card span{
+    margin:0 auto;
+}
+.product-detail--card .clocks{
+    display:inline-block;
+    width:30px;
+    height:30px;
+    background-image: url('../img/time.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.product-detail--card .pay{
+    display:inline-block;
+    width: 30px;
+    height:30px;
+    background-image: url('../img/pay.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.product-detail--card .business{
+    display:inline-block;
+    width: 30px;
+    height:30px;
+    background-image: url('../img/contador.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+/*Section DOWNLOAD COUNTER and DOWNLOAD BUSINESS*/
+.button--download a {
+    text-decoration: none;
+    color:var(--just-white);
+}
+.section-download__counter{
+    position:relative;
+    width:100%;
+    height: auto;
+    display:flex;
+    flex-direction:column;
+    background-color: var(--second-color-blue);
+}
+.section-counter__text{
+    color:var(--just-white);
+    margin:0 auto;
+    padding:50px 10px;
+}
+
+.section-counter__text .section-download__title{
+    line-height:7rem;
+    text-align:center;
+    font-size:2.7rem;
+}
+.section-download__counter img{
+    width:80px;
+    margin:0 auto;
+}
+
+.section-download__counter .section-content__button{
+    display:flex;
+    align-self:center;
+    padding:30px 0;
+}
+
+.section-download__counter .button--download{
+    width: 120px;
+    height:30px;
+    border-radius:40px;
+    background-color:var(--just-black);
+    color: var(--just-white);
+    border:none;
+}
+.section-download__counter .section-download__content{
+    font-size:1.4rem;
+
+}
+.section-download__counter .right{
+    margin-right:50px;
+}
+
+.section-download__counter .left{
+    margin-left:30px;
+    margin-top:0;
+}
+/*Section BUY INFORMATION*/
+.section-buy-information{
+    width:100%;
+    margin-top:10px;
+    text-align:center;
+}
+
+.section-buy-information .information-card{
+    height:316px;
+    display:flex;
+    overflow-x:scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.section-buy-information .content-cards{
+    position:relative;
+    width:70%;
+    height:230px;
+    padding:0 15px;
+    min-width:170px;
+    max-width:300px;
+    margin: 50px 5px 0;
+    scroll-snap-align:center;
+    background-color:var(--soft-white);
+    border-radius:15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+    justify-content:center;
+}
+
+.content-cards .recommended{
+    position:absolute;
+    top:-15px;
+    width:85px;
+    padding:6px;
+    height:30px;
+    left: calc(50% - 42px);
+    background-color: var(--second-color-blue);
+    color:var(--just-white);
+    font-size:1.2rem;
+    border-radius:5px;
+    font-weight:bold;
+}
+.content-cards h3,.text-content{
+    color:var(--second-color-blue);
+}
+
+.content-cards h3{
+    padding-top:30px;
+    font-weight: bold;
+    font-size:1.2rem;
+}
+.card-image__content{
+    width:50%;
+    margin-left:30px;
+}
+
+.content-cards .text-content{
+    font-weight:normal;
+    padding-top:20px;
+    font-size:1.0rem;
+    flex-wrap:wrap;
+}
+/*Section ABOUT THE PRODUCT - TEAM*/
+.section-about-content{
+    position:relative;
+    width:100%;
+    height:auto;
+}
+.section-about-content .about-the-team__content{
+    width:90%;
+    margin:0 auto;
+}
+.about__content{
+    color: var(--second-color-blue);
+    text-align:center;
+}
+.about-the-team__content .about__content{
+    text-align:center;
+    padding:10px;
+    line-height:1.4rem;
+}
+.sectionvideo{
+    display:flex;
+    margin-bottom: 40px;
+    justify-content:center;
+}
+.videoteam {
+    width:90%;
+    margin:0 auto;
+}
+
+.about-the-product__content{
+    width:90%;
+    margin: 0 auto;
+}
+.about-the-product__content .about__content{
+    width:90%;
+    margin:0 auto;
+    line-height:1.4rem;
+}
+/*Section CALL TO ACTION*/
+.call-to-action{
+    position:relative;
+    width:100%;
+    height:350px;
+    background-image:url('../img/ciudad.jpg');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.call-to-action .div-call__content{
+    /*display:flex;
+    position:absolute;
+    flex-direction:column;
+    justify-content:center;*/
+    width:300px;
+    text-align:center;
+    background-color:var(--just-black);
+    /*align-items:center;*/
+    line-height: 3.0rem;
+    max-width: 306px;
+    border-radius:5px;
+}
+.div-call__content .call-to-action__title,.call-to-action__content{
+    color:var(--just-white);
+}
+
+.div-call__content .call-to-action__title{
+    font-weight:bold;
+    font-size:1.6rem;
+}
+
+.call-to-action__content{
+    font-size:1.0rem;
+}
+.button-call-action{
+    font-size:1.4rem;
+    padding:2px 5px;
+    margin-top:14px;
+    border:none;
+    Color: var(--just-white);
+    background-color:var(--second-color-blue);
+    border-radius:7px;
+    margin-right:5px;
+    text-decoration: none;
+    cursor:pointer;
+}
+/*section FOOTER_i*/
+footer
+{
+    width: 100%;
+    background:#202020 ;
+    color: white;
+
+}
+.container-footer-all
+{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;/*para que siempre este centrado*/
+    padding: 40px;
+}
+.container-body
+{
+    display: flex;
+    justify-content: space-between;/*de extremo a extremo */
+
+}
+/*column1-inicio */
+.column1
+{
+    max-width: 400px;/*maximo*/
+}
+.column1 h1
+{
+    font-size: 22px;
+}
+.column1 p
+{
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;/*sepracion hacia abajo*/
+}
+/*column1-end */
+/*column2-inicio */
+.column2
+{
+    max-width: 400px;
+
+
+}
+.column2 h1
+{
+    font-size: 22px;
+}
+.column2 .row
+{
+    margin-top: 20px;
+    display: flex;
+}
+.row img
+{
+    width: 36px;
+    height: 36px;
+}
+.row label
+{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+/*column2-end */
+/*column3-inicio */
+.column3
+{
+    max-width: 400px;
+}
+.column3 h1
+{
+    font-size: 22px;
+}
+.row2
+{
+    margin-top: 20px;
+    display: flex;
+}
+.row2 img
+{
+    width: 36px;
+    height: 36px;
+}
+.row2 label
+{
+    margin-left: 20px;
+    max-width: 140px;
+    margin-top: 10px;
+}
+/*column3-end */
+/*container-footer-inicio */
+.container-footer
+{
+    width: 100%;
+    background: #101010;
+
+}
+.footer
+{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;/*para poner de una la del otro*/
+    justify-content: space-between;
+    padding: 20px;
+}
+.copyright
+{
+    color: #C7C7C7;
+
+}
+.copyright a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+}
+.information a
+{
+    text-decoration: none;
+    color: white;
+
+}
+/*container-footer-end */
